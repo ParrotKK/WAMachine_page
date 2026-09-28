@@ -1049,3 +1049,11 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
   .ablation-heading{margin-top:34px;padding-top:27px}
   .ablation-heading h3{font-size:26px}
 }
+
+/* Keep paper captions verbatim; source links sit outside the caption text. */
+.figure-source-row{
+  margin:7px 0 0;
+  text-align:right;
+}
+.figure-source-row .figure-source{margin-left:0}
+.table-note strong{color:var(--ink)}

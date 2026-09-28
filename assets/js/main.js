@@ -138,7 +138,7 @@
   const dialogBody = $('#dialog-body');
   const zoomButton = $('#dialog-zoom');
   let previousOverflow = '';
-  const titles = { 'execution-figure': 'Figure 1 · The main idea', 'framework-figure': 'Figure 3 · WAMachine framework', 'analysis-figure': 'Figure 2 · Evidence for state continuity' };
+  const titles = { 'execution-figure': 'Figure 1 · The main idea of WAMachine', 'framework-figure': 'Figure 3 · The framework of WAMachine', 'analysis-figure': 'Figure 2 · Evidence for state continuity' };
   $$('.zoomable').forEach(link => link.addEventListener('click', event => {
     if (typeof dialog.showModal !== 'function') return;
     event.preventDefault();
@@ -181,7 +181,6 @@
     const match = parsed.hostname.replace(/^www\./, '') === 'arxiv.org' && parsed.pathname.match(/^\/abs\/([0-9]{4}\.[0-9]{4,5}(?:v\d+)?|[a-z.-]+\/[0-9]{7})$/i);
     if (match) {
       bibtex = bibtex.replace(/  note\s*=\s*\{[^}]+\}/, `  eprint = {${match[1]}},\n  archivePrefix = {arXiv},\n  url    = {${arxivURL}}`);
-      $('#citation-note').firstChild.textContent = 'Citation metadata uses the configured arXiv record. ';
     }
   }
   bibtexField.textContent = bibtex;
