@@ -97,7 +97,6 @@
     const ours = model.rows.find(row => row[0] === 'WAMachine');
     if (!native || !ours) return;
     $('#selected-model').textContent = model.label;
-    $('#table-model').textContent = model.label;
     $('#selected-benchmark').textContent = model.benchmark;
     $('#selected-subset').textContent = model.subset;
     $('#model-result-panel').setAttribute('aria-labelledby', 'result-tab-' + key);
@@ -123,7 +122,7 @@
   if (data && data.largeSample) {
     $('#success-cards').innerHTML = data.largeSample.map(row => {
       const suites = Object.entries(row.suites).map(([name, values]) => `<tr><th scope="row">${escapeHTML(name)}</th><td class="num">${number(values[0])}</td><td class="num">${number(values[1])}</td></tr>`).join('');
-      return `<article class="success-card"><h4>${escapeHTML(row.model)}</h4><p class="card-sub">${escapeHTML(row.benchmark)} · ${number(row.episodes, 0)} episodes / method</p><div class="retention">${number(row.retention)}%<span>of native average task success retained</span></div><div class="success-pair"><div><div class="value">${number(row.native)}%</div><div class="label">Native average SR</div></div><div><div class="value ours-text">${number(row.wamachine)}%</div><div class="label">WAMachine average SR</div></div></div><details class="suite-details"><summary>See individual suites / settings</summary><table class="suite-table"><caption class="sr-only">${escapeHTML(row.model)} success rate by suite, in percent</caption><thead><tr><th scope="col">Suite</th><th scope="col" class="num">Native</th><th scope="col" class="num">WAMachine</th></tr></thead><tbody>${suites}</tbody></table></details></article>`;
+      return `<article class="success-card"><h4>${escapeHTML(row.model)}</h4><p class="card-sub">${escapeHTML(row.benchmark)} · ${number(row.episodes, 0)} episodes / method</p><div class="retention">${number(row.retention)}%<span>of native average task success retained</span></div><div class="success-pair"><div><div class="value">${number(row.native)}%</div><div class="label">Native average SR</div></div><div><div class="value ours-text">${number(row.wamachine)}%</div><div class="label">WAMachine average SR</div></div></div><div class="suite-details"><table class="suite-table"><caption class="sr-only">${escapeHTML(row.model)} success rate by suite, in percent</caption><thead><tr><th scope="col">Suite</th><th scope="col" class="num">Native</th><th scope="col" class="num">WAMachine</th></tr></thead><tbody>${suites}</tbody></table></div></article>`;
     }).join('');
   }
   if (data && data.ablation) {

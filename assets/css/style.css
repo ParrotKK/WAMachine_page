@@ -963,3 +963,14 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
   #results .table-wrap>table{min-width:720px}
   #analysis .table-wrap>table{min-width:780px}
 }
+
+/* Keep supporting results in the reading flow instead of secondary disclosure. */
+.block-heading{display:block}
+.block-heading p{max-width:none;margin-top:10px}
+#results #model-result-panel>.table-wrap{margin-top:32px}
+.suite-details{
+  margin-top:16px;
+  padding-top:10px;
+  border-top:1px solid var(--line);
+}
+.suite-details .suite-table{margin-top:0}
