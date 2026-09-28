@@ -1,6 +1,6 @@
 /** Public links only. Never put tokens, credentials or private URLs in this file. */
 window.WAMACHINE_CONFIG = {
-  paperUrl: 'assets/paper/wamachine.pdf',
+  paperUrl: 'assets/paper/wamachine.pdf?v=20260928-19',
   codeUrl: 'https://github.com/RSIScience/WAMachine',
   arxivUrl: '',         // Add the real arXiv abstract URL after publication.
   projectUrl: 'https://parrotkk.github.io/WAMachine_page/',
