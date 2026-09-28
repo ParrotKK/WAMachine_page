@@ -57,8 +57,7 @@ window.WAMACHINE_DATA = {
           1.47,
           96.0
         ]
-      ],
-      "note": "Cosmos Policy uses a joint video/action trajectory. Timing covers the same 200 LIBERO conditions for every method."
+      ]
     },
     "fastwam": {
       "label": "Fast-WAM-IDM",
@@ -115,8 +114,7 @@ window.WAMACHINE_DATA = {
           3.05,
           97.0
         ]
-      ],
-      "note": "Fast-WAM-IDM is evaluated with both video and action branches; this is not the action-only variant."
+      ]
     },
     "motus": {
       "label": "Motus",
@@ -173,8 +171,7 @@ window.WAMACHINE_DATA = {
           2.59,
           82.0
         ]
-      ],
-      "note": "Motus timing uses the fixed Clean subset. WAMachine additionally uses a rendering GPU; rendering is not included in the GPU inference metric."
+      ]
     }
   },
   "largeSample": [

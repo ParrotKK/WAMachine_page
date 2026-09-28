@@ -100,7 +100,6 @@
     $('#table-model').textContent = model.label;
     $('#selected-benchmark').textContent = model.benchmark;
     $('#selected-subset').textContent = model.subset;
-    $('#model-note').textContent = model.note;
     $('#model-result-panel').setAttribute('aria-labelledby', 'result-tab-' + key);
     for (const [metric, column, speedup] of [['gpu', 1, model.gpuSpeedup], ['o2a', 3, model.o2aSpeedup]]) {
       const maximum = Math.max(native[column], ours[column]);
