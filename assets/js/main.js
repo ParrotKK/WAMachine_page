@@ -36,13 +36,10 @@
   }
   const codeURL = safeURL(config.codeUrl);
   if (codeURL) {
-    for (const id of ['code-link', 'code-resource-link']) {
-      const link = $('#' + id); link.href = codeURL; link.hidden = false;
-    }
+    const link = $('#code-link');
+    link.href = codeURL;
+    link.hidden = false;
     $('#code-pending').hidden = true;
-    $('#code-resource').classList.remove('inactive');
-    $('#code-resource-description').textContent = 'Access the public implementation, setup instructions, and model-specific integration details.';
-    $('#code-resource-status').hidden = true;
   } else if (config.codePendingLabel) {
     $('#code-pending-label').textContent = config.codePendingLabel;
   }
