@@ -1057,3 +1057,57 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
 }
 .figure-source-row .figure-source{margin-left:0}
 .table-note strong{color:var(--ink)}
+
+/* All method panels occupy the same grid cell, so content below them stays fixed. */
+.method-panels{display:grid}
+.method-panels>.method-panel{grid-area:1/1}
+.method-panels>.method-panel[hidden]{
+  display:grid!important;
+  visibility:hidden;
+  pointer-events:none;
+}
+
+/* Lead with the paper's aggregate success comparison; keep suite detail secondary. */
+.success-card{display:flex;flex-direction:column}
+.success-summary{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  margin-top:20px;
+  padding:17px 0 19px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  font-variant-numeric:tabular-nums;
+}
+.success-summary span{
+  display:block;
+  color:var(--subtle);
+  font-size:11px;
+  line-height:1.4;
+}
+.success-summary strong{
+  display:block;
+  margin-top:5px;
+  color:var(--ink);
+  font-size:23px;
+  line-height:1.15;
+  letter-spacing:-.55px;
+}
+.success-summary .ours-summary strong{color:var(--blue-dark)}
+.success-card .suite-details{margin-top:22px}
+.ablation-copy{
+  width:min(100%,1100px);
+  margin:25px auto 0;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.85;
+}
+.ablation-copy strong{color:var(--ink)}
+
+@media(max-width:760px){
+  .method-panels>.method-panel{grid-template-columns:1fr}
+  .success-summary{gap:9px}
+  .success-summary span{font-size:10px}
+  .success-summary strong{font-size:20px}
+  .ablation-copy{width:100%;font-size:14px}
+}

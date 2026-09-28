@@ -121,8 +121,8 @@
   // The static tables work without JS. Dynamic versions use the same local data source.
   if (data && data.largeSample) {
     $('#success-cards').innerHTML = data.largeSample.map(row => {
-      const suites = Object.entries(row.suites).map(([name, values]) => `<tr><th scope="row">${escapeHTML(name)}</th><td class="num">${number(values[0])}</td><td class="num">${number(values[1])}</td></tr>`).join('') + `<tr><th scope="row">Average</th><td class="num">${number(row.native)}</td><td class="num">${number(row.wamachine)}</td></tr><tr><th scope="row">Retention</th><td class="num">—</td><td class="num">${number(row.retention)}</td></tr>`;
-      return `<article class="success-card"><h4>${escapeHTML(row.model)}</h4><div class="suite-details"><table class="suite-table"><caption class="sr-only">${escapeHTML(row.model)} success rate by suite, in percent</caption><thead><tr><th scope="col">Suite</th><th scope="col" class="num">Native</th><th scope="col" class="num">WAMachine</th></tr></thead><tbody>${suites}</tbody></table></div></article>`;
+      const suites = Object.entries(row.suites).map(([name, values]) => `<tr><th scope="row">${escapeHTML(name)}</th><td class="num">${number(values[0])}</td><td class="num">${number(values[1])}</td></tr>`).join('');
+      return `<article class="success-card"><h4>${escapeHTML(row.model)}</h4><div class="success-summary" aria-label="Average task success and retention"><div><span>Native</span><strong>${number(row.native)}%</strong></div><div class="ours-summary"><span>WAMachine</span><strong>${number(row.wamachine)}%</strong></div><div><span>Retention</span><strong>${number(row.retention)}%</strong></div></div><div class="suite-details"><table class="suite-table"><caption class="sr-only">${escapeHTML(row.model)} success rate by suite, in percent</caption><thead><tr><th scope="col">Suite</th><th scope="col" class="num">Native</th><th scope="col" class="num">WAMachine</th></tr></thead><tbody>${suites}</tbody></table></div></article>`;
     }).join('');
   }
   if (data && data.ablation) {
