@@ -44,8 +44,8 @@ Speedups are measured against Native on matched 200-episode subsets. Task-succes
   title  = {{WAMachine}: Training-Free Acceleration of
             World Action Models via Stateful Inference},
   author = {Liu, Zhinan and Han, Haozhi and Zhang, Ruge and
-            Zhang, Yunquan and Chen, Yifeng and Ma, Teng and
-            Liu, Zheng and Ma, Tao and Cao, Ting and
+            Ma, Teng and Ma, Tao and Liu, Zheng and
+            Chen, Yifeng and Zhang, Yunquan and Cao, Ting and
             Liu, Yunxin and Li, Kun},
   year   = {2026},
   note   = {Manuscript}
