@@ -801,6 +801,7 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
 }
 
 /* Homepage correction: a single academic title, aligned affiliations, and horizontal evidence. */
+[hidden]{display:none!important}
 .wordmark{
   font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
   font-size:16px;
@@ -811,7 +812,7 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
   padding:48px 0 52px;
   text-align:center;
 }
-.hero .container{display:block}
+.hero .container{display:block;text-align:center}
 .institution-strip{
   display:flex;
   align-items:center;
@@ -826,15 +827,9 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
 .institution-xmu,.institution-pku{flex:0 0 72px}.institution-xmu img,.institution-pku img{width:72px;height:72px}
 .institution-ict{flex:0 0 92px}.institution-ict img{width:88px;max-height:72px}
 .institution-alibaba{flex:0 1 235px}.institution-alibaba img{width:235px;max-height:36px}
-.hero .eyebrow{
-  display:inline-block;
-  margin:0 auto;
-  padding-left:13px;
-  text-align:left;
-}
 .hero h1{
   max-width:1180px;
-  margin:29px auto 0;
+  margin:0 auto;
   color:var(--ink);
   font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
   font-size:clamp(46px,4vw,58px);
@@ -842,11 +837,10 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
   letter-spacing:-1.8px;
   line-height:1.08;
 }
-.hero-note{margin:21px auto 0}
-.authors{max-width:1060px;margin:31px auto 0}
+.authors{max-width:1060px;margin:31px auto 0;text-align:center}
 .author{margin:0 7px}
-.affiliations{justify-content:center;max-width:1080px;margin:13px auto 0}
-.contributions{margin:10px auto 0}
+.affiliations{justify-content:center;max-width:1080px;margin:13px auto 0;text-align:center}
+.contributions{margin:10px auto 0;text-align:center}
 .hero-actions{justify-content:center;margin:26px auto 0}
 .metrics{
   display:grid;
@@ -891,7 +885,7 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
   .institution-xmu img,.institution-pku img{width:52px;height:52px}
   .institution-ict{flex:0 0 68px}.institution-ict img{width:66px;max-height:54px}
   .institution-alibaba{flex:0 0 126px}.institution-alibaba img{width:126px;max-height:22px}
-  .hero h1{max-width:650px;margin-top:24px;font-size:clamp(34px,10vw,45px);letter-spacing:-1.25px;line-height:1.12}
+  .hero h1{max-width:650px;margin-top:0;font-size:clamp(34px,10vw,45px);letter-spacing:-1.25px;line-height:1.12}
   .hero h1 br{display:none}
   .hero-note{margin-top:18px}
   .authors{margin-top:27px}

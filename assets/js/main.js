@@ -39,9 +39,6 @@
     const link = $('#code-link');
     link.href = codeURL;
     link.hidden = false;
-    $('#code-pending').hidden = true;
-  } else if (config.codePendingLabel) {
-    $('#code-pending-label').textContent = config.codePendingLabel;
   }
   const arxivURL = safeURL(config.arxivUrl);
   if (arxivURL) { $('#arxiv-link').href = arxivURL; $('#arxiv-link').hidden = false; }

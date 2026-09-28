@@ -7,5 +7,4 @@ window.WAMACHINE_CONFIG = {
   citationKey: 'liu2026wamachine',
   citationYear: '2026',
   citationNote: 'Manuscript',
-  codePendingLabel: 'Link pending',
 };
