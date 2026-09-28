@@ -914,27 +914,31 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
 #introduction .container{display:block}
 #introduction .section-heading{margin-bottom:30px}
 #introduction .paper-figure{
-  width:min(1120px,100%);
+  width:min(1000px,100%);
   margin:0 auto;
 }
-#introduction .intro-copy{
-  display:block;
-  max-width:900px;
-  margin:38px auto 0;
+#introduction .paper-figure figcaption{
+  width:100%;
+  max-width:none;
 }
-#introduction .intro-lead{
-  margin-bottom:30px;
-  color:var(--ink);
-  font-size:17px;
-  line-height:1.85;
-}
-#introduction .abstract{
+#introduction .introduction-prose{
   max-width:900px;
-  margin:30px auto 0;
+  margin:42px auto 0;
+}
+#introduction .introduction-prose p{text-wrap:pretty}
+#introduction .introduction-prose ul{
+  margin:16px 0 0;
+  padding-left:1.35em;
+}
+#introduction .introduction-prose li{
+  padding-left:.35em;
+  text-wrap:pretty;
+}
+#introduction .introduction-prose li+li{
+  margin-top:10px;
 }
 
 @media(max-width:760px){
   #introduction .section-heading{margin-bottom:23px}
-  #introduction .intro-copy{margin-top:28px}
-  #introduction .intro-lead{font-size:15px;line-height:1.8}
+  #introduction .introduction-prose{margin-top:30px}
 }
