@@ -824,7 +824,7 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
 }
 .institution-strip a{display:grid;place-items:center;height:76px;width:auto}
 .institution-strip img{display:block;width:auto;max-width:100%;object-fit:contain}
-.institution-air{flex:0 1 370px}.institution-air img{width:370px;max-height:53px}
+.institution-air{flex:0 1 430px}.institution-air img{width:430px;max-height:62px}
 .institution-xmu,.institution-pku{flex:0 0 72px}.institution-xmu img,.institution-pku img{width:72px;height:72px}
 .institution-ict{flex:0 0 92px}.institution-ict img{width:88px;max-height:72px}
 .institution-alibaba{flex:0 1 235px}.institution-alibaba img{width:235px;max-height:36px}
@@ -882,7 +882,7 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
   }
   .institution-strip a{height:56px}
   .institution-air{flex:1 0 100%;height:42px!important}
-  .institution-air img{width:260px;max-height:38px}
+  .institution-air img{width:300px;max-height:43px}
   .institution-xmu,.institution-pku{flex:0 0 52px}
   .institution-xmu img,.institution-pku img{width:52px;height:52px}
   .institution-ict{flex:0 0 68px}.institution-ict img{width:66px;max-height:54px}
@@ -902,7 +902,7 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
 @media(max-width:480px){
   .wordmark{max-width:245px;font-size:14px;white-space:nowrap}
   .institution-strip{gap:8px 13px}
-  .institution-air img{width:245px;max-height:36px}
+  .institution-air img{width:290px;max-height:42px}
   .institution-xmu,.institution-pku{flex-basis:48px}
   .institution-xmu img,.institution-pku img{width:48px;height:48px}
   .institution-ict{flex-basis:62px}.institution-ict img{width:60px}
@@ -918,6 +918,11 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
   margin:0 auto;
 }
 #introduction .paper-figure figcaption{
+  width:100%;
+  max-width:none;
+}
+/* Keep every caption aligned to the full width of its corresponding figure. */
+.paper-figure figcaption{
   width:100%;
   max-width:none;
 }
