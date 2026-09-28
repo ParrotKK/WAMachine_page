@@ -320,22 +320,22 @@ button:focus-visible,a:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .body-copy{color:var(--muted);font-size:15px;line-height:1.9}
 
 /* Figure 1 sits beside the premise, so the paper's own visual explains the work early. */
-#intro .container{
+#introduction .container{
   display:grid;
   grid-template-columns:minmax(260px,.62fr) minmax(0,1.38fr);
   column-gap:54px;
   align-items:start;
 }
-#intro .section-heading{grid-column:1 / -1}
-#intro .intro-copy{
+#introduction .section-heading{grid-column:1 / -1}
+#introduction .intro-copy{
   grid-column:1;
   grid-row:2;
   display:block;
   margin:0;
 }
-#intro .intro-copy p+p{margin-top:1.35em}
-#intro .paper-figure{grid-column:2;grid-row:2 / span 2;margin:0}
-#intro .abstract{grid-column:1;grid-row:3;margin-top:28px}
+#introduction .intro-copy p+p{margin-top:1.35em}
+#introduction .paper-figure{grid-column:2;grid-row:2 / span 2;margin:0}
+#introduction .abstract{grid-column:1;grid-row:3;margin-top:28px}
 
 .paper-figure{margin-top:36px}
 .figure-shell{
@@ -515,7 +515,7 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
   .metric{grid-template-columns:108px 1fr;column-gap:13px}
   .metric-value{font-size:32px}
   .section-heading{gap:40px}
-  #intro .container{grid-template-columns:minmax(230px,.58fr) minmax(0,1.42fr);column-gap:36px}
+  #introduction .container{grid-template-columns:minmax(230px,.58fr) minmax(0,1.42fr);column-gap:36px}
 }
 
 @media(max-width:760px){
@@ -551,10 +551,10 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
   .section-heading{display:block;margin-bottom:30px}
   .section-heading h2{font-size:34px}
   .section-heading .intro{padding-top:20px;font-size:14px}
-  #intro .container{display:block}
-  #intro .intro-copy{margin-bottom:28px}
-  #intro .paper-figure{margin:0}
-  #intro .abstract{margin-top:27px}
+  #introduction .container{display:block}
+  #introduction .intro-copy{margin-bottom:28px}
+  #introduction .paper-figure{margin:0}
+  #introduction .abstract{margin-top:27px}
   .figure-shell{padding:8px}
   .paper-figure figcaption{font-size:12px}
   .method-panel{gap:28px}
@@ -716,7 +716,7 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
 /* Prose composition: short measures and progressive disclosure prevent text walls. */
 .section-heading .intro{max-width:48ch;text-wrap:pretty}
 .intro-copy p,.method-panel p,.ablation-callout p,.resource-card p{text-wrap:pretty}
-#intro .intro-copy{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+#introduction .intro-copy{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
 .intro-point{padding:0 0 21px}
 .intro-point+.intro-point{padding-top:21px;border-top:1px solid var(--line)}
 .prose-label{
@@ -908,4 +908,33 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
   .institution-ict{flex-basis:62px}.institution-ict img{width:60px}
   .institution-alibaba{flex-basis:114px}.institution-alibaba img{width:114px}
   .hero h1{font-size:36px}
+}
+
+/* Introduction follows the paper vertically: title, figure, then prose. */
+#introduction .container{display:block}
+#introduction .section-heading{margin-bottom:30px}
+#introduction .paper-figure{
+  width:min(1120px,100%);
+  margin:0 auto;
+}
+#introduction .intro-copy{
+  display:block;
+  max-width:900px;
+  margin:38px auto 0;
+}
+#introduction .intro-lead{
+  margin-bottom:30px;
+  color:var(--ink);
+  font-size:17px;
+  line-height:1.85;
+}
+#introduction .abstract{
+  max-width:900px;
+  margin:30px auto 0;
+}
+
+@media(max-width:760px){
+  #introduction .section-heading{margin-bottom:23px}
+  #introduction .intro-copy{margin-top:28px}
+  #introduction .intro-lead{font-size:15px;line-height:1.8}
 }
