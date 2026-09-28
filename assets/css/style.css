@@ -799,3 +799,117 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
   .protocol-body p+p{margin-top:18px}
   .protocol-body p:last-child{padding-top:18px}
 }
+
+/* Homepage correction: a single academic title, aligned affiliations, and horizontal evidence. */
+.wordmark{
+  font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
+  font-size:16px;
+  font-weight:600;
+  letter-spacing:-.15px;
+}
+.hero{
+  padding:48px 0 52px;
+  text-align:center;
+}
+.hero .container{display:block}
+.institution-strip{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(24px,3.6vw,52px);
+  width:min(1080px,100%);
+  margin:0 auto 48px;
+}
+.institution-strip a{display:grid;place-items:center;height:76px;width:auto}
+.institution-strip img{display:block;width:auto;max-width:100%;object-fit:contain}
+.institution-air{flex:0 1 300px}.institution-air img{width:300px;max-height:43px}
+.institution-xmu,.institution-pku{flex:0 0 72px}.institution-xmu img,.institution-pku img{width:72px;height:72px}
+.institution-ict{flex:0 0 92px}.institution-ict img{width:88px;max-height:72px}
+.institution-alibaba{flex:0 1 235px}.institution-alibaba img{width:235px;max-height:36px}
+.hero .eyebrow{
+  display:inline-block;
+  margin:0 auto;
+  padding-left:13px;
+  text-align:left;
+}
+.hero h1{
+  max-width:1180px;
+  margin:29px auto 0;
+  color:var(--ink);
+  font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
+  font-size:clamp(46px,4vw,58px);
+  font-weight:600;
+  letter-spacing:-1.8px;
+  line-height:1.08;
+}
+.hero-note{margin:21px auto 0}
+.authors{max-width:1060px;margin:31px auto 0}
+.author{margin:0 7px}
+.affiliations{justify-content:center;max-width:1080px;margin:13px auto 0}
+.contributions{margin:10px auto 0}
+.hero-actions{justify-content:center;margin:26px auto 0}
+.metrics{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  width:100%;
+  margin:46px auto 0;
+  padding:0;
+  border:0;
+  border-top:2px solid var(--blue);
+  border-bottom:1px solid var(--line);
+  background:transparent;
+  text-align:left;
+}
+.metric{
+  display:grid;
+  grid-template-columns:max-content minmax(0,1fr);
+  grid-template-rows:auto auto auto;
+  column-gap:16px;
+  padding:23px 27px 25px;
+}
+.metric+.metric{border-top:0;border-left:1px solid var(--line)}
+.metric-top{grid-column:1 / -1;margin-bottom:4px}
+.metric-value{grid-column:1;grid-row:2 / span 2;font-size:34px}
+.metric-label{grid-column:2;grid-row:2;align-self:end}
+.metric-range{grid-column:2;grid-row:3}
+.hero-footnote{max-width:980px;margin:15px auto 0;text-align:center}
+.model-strip{justify-content:center;padding-top:21px}
+
+@media(max-width:760px){
+  .wordmark{font-size:15px}
+  .hero{padding:31px 0 39px}
+  .institution-strip{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 18px;
+    margin-bottom:34px;
+  }
+  .institution-strip a{height:56px}
+  .institution-air{flex:1 0 100%;height:34px!important}
+  .institution-air img{width:220px;max-height:32px}
+  .institution-xmu,.institution-pku{flex:0 0 52px}
+  .institution-xmu img,.institution-pku img{width:52px;height:52px}
+  .institution-ict{flex:0 0 68px}.institution-ict img{width:66px;max-height:54px}
+  .institution-alibaba{flex:0 0 126px}.institution-alibaba img{width:126px;max-height:22px}
+  .hero h1{max-width:650px;margin-top:24px;font-size:clamp(34px,10vw,45px);letter-spacing:-1.25px;line-height:1.12}
+  .hero h1 br{display:none}
+  .hero-note{margin-top:18px}
+  .authors{margin-top:27px}
+  .hero-actions{justify-content:center}
+  .metrics{display:block;margin-top:37px}
+  .metric{grid-template-columns:max-content minmax(0,1fr);padding:19px 0 21px}
+  .metric+.metric{border-left:0;border-top:1px solid var(--line)}
+  .hero-footnote{text-align:left}
+  .model-strip{justify-content:flex-start}
+}
+
+@media(max-width:480px){
+  .wordmark{max-width:245px;font-size:14px;white-space:nowrap}
+  .institution-strip{gap:8px 13px}
+  .institution-air img{width:195px}
+  .institution-xmu,.institution-pku{flex-basis:48px}
+  .institution-xmu img,.institution-pku img{width:48px;height:48px}
+  .institution-ict{flex-basis:62px}.institution-ict img{width:60px}
+  .institution-alibaba{flex-basis:114px}.institution-alibaba img{width:114px}
+  .hero h1{font-size:36px}
+}

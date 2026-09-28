@@ -1,18 +1,18 @@
-# WAMachine
+# Efficient World Action Model Inference with Adaptive Intermediate States
 
-**Training-Free Acceleration of World Action Models via Stateful Inference**
+Training-free inference through adaptive intermediate states.
 
 [Project page](https://parrotkk.github.io/WAMachine_page/) · [Paper](assets/paper/wamachine.pdf) · [Code](https://github.com/RSIScience/WAMachine)
 
 ## Overview
 
-World Action Models repeatedly compute closely related states across replanning, iterative denoising, and Transformer execution. WAMachine is a training-free framework that preserves, adapts, and checks inference state so useful computation can continue as the control loop evolves.
+World Action Models repeatedly compute closely related states across replanning, iterative denoising, and Transformer execution. This training-free framework preserves, adapts, and checks inference state so useful computation can continue as the control loop evolves.
 
-![Conventional WAM inference compared with WAMachine](assets/images/execution-comparison.webp)
+![Conventional WAM inference compared with adaptive intermediate-state inference](assets/images/execution-comparison.webp)
 
 ## Method
 
-WAMachine reuses state at three scopes:
+The method reuses state at three scopes:
 
 1. **Trajectory Remapping** carries a denoised endpoint and direction into the next closed-loop replan.
 2. **Observation Rebinding** computes a bounded anticipatory prefix during action execution, then checks and rebinds it to the real observation.
@@ -41,8 +41,8 @@ Speedups are measured against Native on matched 200-episode subsets. Task-succes
 
 ```bibtex
 @misc{liu2026wamachine,
-  title  = {{WAMachine}: Training-Free Acceleration of
-            World Action Models via Stateful Inference},
+  title  = {Efficient World Action Model Inference with
+            Adaptive Intermediate States},
   author = {Liu, Zhinan and Han, Haozhi and Zhang, Ruge and
             Ma, Teng and Ma, Tao and Liu, Zheng and
             Chen, Yifeng and Zhang, Yunquan and Cao, Ting and
