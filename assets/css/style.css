@@ -947,3 +947,19 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
   #introduction .section-heading{margin-bottom:23px}
   #introduction .introduction-prose{margin-top:30px}
 }
+
+/* Main data tables share one responsive, centered measure with their captions. */
+.table-heading,
+.table-wrap,
+.table-note{
+  width:min(100%,1100px);
+  margin-left:auto;
+  margin-right:auto;
+}
+.table-note{max-width:none}
+.table-wrap>table{width:100%}
+@media(max-width:760px){
+  .table-heading,.table-wrap,.table-note{width:100%}
+  #results .table-wrap>table{min-width:720px}
+  #analysis .table-wrap>table{min-width:780px}
+}
