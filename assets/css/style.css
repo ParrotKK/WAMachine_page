@@ -974,3 +974,13 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
   border-top:1px solid var(--line);
 }
 .suite-details .suite-table{margin-top:0}
+
+/* Let the method guard note read as one full-width horizontal statement. */
+.guard-note{
+  width:100%;
+  max-width:none;
+}
+.guard-note strong{
+  display:inline;
+  margin:0 .35em 0 0;
+}
