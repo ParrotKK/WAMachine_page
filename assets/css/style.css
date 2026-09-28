@@ -984,3 +984,68 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
   display:inline;
   margin:0 .35em 0 0;
 }
+
+/* Use the model names as the visual anchors for the result tables. */
+.result-tab{
+  padding:14px 24px;
+  font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
+  font-size:18px;
+  font-weight:600;
+}
+.success-cards{
+  gap:0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.success-card{
+  padding:26px 26px 28px;
+  border:0;
+  border-radius:0;
+  background:transparent;
+}
+.success-card+.success-card{border-left:1px solid var(--line)}
+.success-card h4{
+  font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
+  font-size:26px;
+  font-weight:600;
+  letter-spacing:-.5px;
+}
+.success-card .suite-details{
+  margin-top:20px;
+  padding-top:0;
+  border-top:0;
+}
+.success-card .suite-table{font-size:13px}
+.success-card .suite-table thead th{font-size:11px}
+.data-caption{
+  width:100%;
+  max-width:none;
+  margin:0 0 18px;
+  color:var(--muted);
+  font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
+  font-size:14px;
+  line-height:1.7;
+}
+.data-caption strong{color:var(--ink)}
+.ablation-heading{
+  margin:42px 0 12px;
+  padding-top:32px;
+  border-top:1px solid var(--line);
+}
+.ablation-heading h3{
+  font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
+  font-size:30px;
+  font-weight:600;
+  letter-spacing:-.65px;
+}
+
+@media(max-width:760px){
+  .result-tab{padding:12px 8px;font-size:14px}
+  .success-cards{display:block}
+  .success-card{padding:23px 0 25px}
+  .success-card+.success-card{border-left:0;border-top:1px solid var(--line)}
+  .success-card h4{font-size:24px}
+  .success-card .suite-table{font-size:12px}
+  .ablation-heading{margin-top:34px;padding-top:27px}
+  .ablation-heading h3{font-size:26px}
+}
