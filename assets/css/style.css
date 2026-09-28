@@ -112,9 +112,27 @@ button:focus-visible,a:focus-visible,summary:focus-visible,[tabindex]:focus-visi
   column-gap:76px;
   align-items:start;
 }
+.institution-strip{
+  grid-column:1 / -1;
+  grid-row:1;
+  display:grid;
+  grid-template-columns:minmax(220px,2fr) minmax(64px,.55fr) minmax(64px,.55fr) minmax(76px,.65fr) minmax(190px,1.65fr);
+  align-items:center;
+  justify-items:center;
+  gap:clamp(22px,3.2vw,48px);
+  width:min(1050px,100%);
+  margin:0 auto 54px;
+}
+.institution-strip a{display:grid;place-items:center;width:100%;height:72px}
+.institution-strip img{display:block;max-width:100%;max-height:72px;object-fit:contain}
+.institution-air img{max-width:290px;max-height:42px}
+.institution-xmu img,.institution-pku img{width:70px;height:70px}
+.institution-ict img{max-width:102px;max-height:68px}
+.institution-alibaba img{max-width:238px;max-height:38px}
+.institution-strip a:focus-visible{outline:2px solid var(--blue);outline-offset:6px}
 .hero .eyebrow{
   grid-column:1;
-  grid-row:1;
+  grid-row:2;
   display:block;
   padding:0 0 0 13px;
   border:0;
@@ -131,7 +149,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .hero .eyebrow .dot{display:none}
 .hero h1{
   grid-column:1;
-  grid-row:2;
+  grid-row:3;
   margin:25px 0 12px;
   color:var(--ink);
   font-size:clamp(54px,6vw,76px);
@@ -141,7 +159,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 }
 .hero-title{
   grid-column:1;
-  grid-row:3;
+  grid-row:4;
   max-width:760px;
   margin:0;
   color:var(--ink);
@@ -153,7 +171,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 }
 .hero-note{
   grid-column:1;
-  grid-row:4;
+  grid-row:5;
   max-width:620px;
   margin:22px 0 0;
   color:var(--muted);
@@ -163,7 +181,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 }
 .authors{
   grid-column:1;
-  grid-row:5;
+  grid-row:6;
   max-width:760px;
   margin:30px 0 0;
   font-size:15px;
@@ -173,7 +191,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .author sup,.affiliations sup{color:var(--blue-dark)}
 .affiliations{
   grid-column:1;
-  grid-row:6;
+  grid-row:7;
   justify-content:flex-start;
   max-width:760px;
   margin:12px 0 0;
@@ -184,14 +202,14 @@ button:focus-visible,a:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 }
 .contributions{
   grid-column:1;
-  grid-row:7;
+  grid-row:8;
   margin-top:10px;
   color:var(--subtle);
   font-size:10px;
 }
 .hero-actions{
   grid-column:1;
-  grid-row:8;
+  grid-row:9;
   justify-content:flex-start;
   margin:25px 0 0;
 }
@@ -210,7 +228,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .button.unavailable{background:transparent}
 .metrics{
   grid-column:2;
-  grid-row:1 / span 6;
+  grid-row:2 / span 6;
   display:block;
   margin:0;
   padding:0;
@@ -254,7 +272,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .metric-range{grid-column:2;grid-row:3;margin-top:4px;font-size:10px;line-height:1.55}
 .hero-footnote{
   grid-column:2;
-  grid-row:7;
+  grid-row:8;
   max-width:none;
   margin:15px 0 0;
   color:var(--subtle);
@@ -263,7 +281,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 }
 .model-strip{
   grid-column:2;
-  grid-row:8;
+  grid-row:9;
   justify-content:flex-start;
   gap:8px 14px;
   padding:24px 0 0;
@@ -487,6 +505,11 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
 
 @media(max-width:1000px){
   .hero .container{grid-template-columns:minmax(0,1.4fr) minmax(285px,.8fr);column-gap:44px}
+  .institution-strip{gap:26px;margin-bottom:46px}
+  .institution-air img{max-width:240px;max-height:36px}
+  .institution-xmu img,.institution-pku img{width:62px;height:62px}
+  .institution-ict img{max-width:90px;max-height:62px}
+  .institution-alibaba img{max-width:205px;max-height:32px}
   .hero h1{font-size:60px}
   .hero-title{font-size:34px}
   .metric{grid-template-columns:108px 1fr;column-gap:13px}
@@ -502,6 +525,18 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
   .nav-links .nav-paper{margin-top:7px;border:1px solid var(--line);padding:8px 11px}
   .hero{padding:45px 0 38px}
   .hero .container{display:block}
+  .institution-strip{
+    display:grid;
+    grid-template-columns:minmax(92px,1.8fr) repeat(3,minmax(38px,.65fr)) minmax(80px,1.5fr);
+    gap:8px;
+    min-height:0;
+    margin-bottom:38px;
+  }
+  .institution-strip a{height:52px}
+  .institution-air img{max-width:150px;max-height:25px}
+  .institution-xmu img,.institution-pku img{width:48px;height:48px}
+  .institution-ict img{max-width:59px;max-height:49px}
+  .institution-alibaba img{max-width:112px;max-height:22px}
   .hero h1{margin-top:22px;font-size:54px;letter-spacing:-3px}
   .hero-title{font-size:31px;letter-spacing:-.8px}
   .hero-note{font-size:16px}
@@ -529,6 +564,7 @@ a.resource-card:hover{border-color:var(--line);transform:none;color:var(--blue-d
 }
 
 @media(max-width:480px){
+  .institution-strip{gap:6px;margin-bottom:34px}
   .hero .eyebrow{padding:0 0 0 10px;font-size:11px;line-height:1.5}
   .hero h1{font-size:47px;letter-spacing:-2.6px}
   .hero-title{font-size:28px;line-height:1.17}
