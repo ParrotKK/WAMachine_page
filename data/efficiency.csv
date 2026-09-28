@@ -1,0 +1,19 @@
+model,benchmark,method,gpu_ms_per_replan,gpu_speedup,o2a_ms,o2a_speedup,subset_success_percent
+Cosmos Policy,LIBERO,Native,284.29,1.0,636.77,1.0,98.0
+Cosmos Policy,LIBERO,RTI-DP,59.14,4.81,399.15,1.6,68.5
+Cosmos Policy,LIBERO,RTC,1024.53,0.28,2203.99,0.29,98.0
+Cosmos Policy,LIBERO,VLA-Cache,461.48,0.62,813.54,0.78,98.0
+Cosmos Policy,LIBERO,BAC,205.53,1.38,564.98,1.13,97.5
+Cosmos Policy,LIBERO,WAMachine,120.29,2.36,434.64,1.47,96.0
+Fast-WAM-IDM,LIBERO,Native,367.49,1,416.64,1,98.0
+Fast-WAM-IDM,LIBERO,RTI-DP,269.27,1.36,306.64,1.36,63.0
+Fast-WAM-IDM,LIBERO,RTC,729.27,0.5,1959.68,0.21,82.0
+Fast-WAM-IDM,LIBERO,VLA-Cache,636.89,0.58,714.84,0.58,96.5
+Fast-WAM-IDM,LIBERO,BAC,276.12,1.33,324.39,1.28,99.0
+Fast-WAM-IDM,LIBERO,WAMachine,112.52,3.27,136.42,3.05,97.0
+Motus,RoboTwin 2.0 · Clean,Native,1455.69,1,2343.14,1,84.0
+Motus,RoboTwin 2.0 · Clean,RTI-DP,153.07,9.51,688.37,3.4,8.5
+Motus,RoboTwin 2.0 · Clean,RTC,5639.22,0.26,12683.43,0.18,82.0
+Motus,RoboTwin 2.0 · Clean,VLA-Cache,1525.04,0.95,2539.52,0.92,86.5
+Motus,RoboTwin 2.0 · Clean,BAC,973.63,1.5,1894.1,1.24,82.0
+Motus,RoboTwin 2.0 · Clean,WAMachine,652.26,2.23,906.38,2.59,82.0

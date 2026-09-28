@@ -1,0 +1,4 @@
+model,benchmark,episodes_per_method,native_success_percent,wamachine_success_percent,retention_percent
+Cosmos Policy,LIBERO,6000,98.05,97.02,98.95
+Fast-WAM-IDM,LIBERO,6000,98.6,98.15,99.54
+Motus,RoboTwin 2.0,2000,86.1,83.25,96.69
